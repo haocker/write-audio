@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "write-audio"
+version = "0.2.0"
+description = "用代码写乐谱、渲染成品音乐：引擎只管渲染，曲式/和弦/旋律全由 AI 显式写出（纯 Python + numpy + FFmpeg，零采样、逐样本可复现）"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "write-audio contributors" }]
+keywords = ["music", "composition", "audio", "synthesis", "numpy", "midi", "daw", "songwriting"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+]
+dependencies = [
+    "numpy>=1.16",
+]
+
+[project.urls]
+Homepage = "https://github.com/haocker/write-audio"
+Repository = "https://github.com/haocker/write-audio"
+Issues = "https://github.com/haocker/write-audio/issues"
+
+[project.scripts]
+write-audio = "write_audio.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "runtime" }
+
+[tool.setuptools.packages.find]
+where = ["runtime"]
