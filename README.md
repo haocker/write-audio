@@ -45,11 +45,13 @@ python examples/night-drive/make.py    # 渲染示例曲《Night Drive》（3 �
 python examples/two-tigers/make.py     # 童谣二创《两只老虎 · 午夜电波》（2 分 37 秒，≈39 秒）
 ```
 
-或在你的乐谱脚本目录：
+或在你的乐谱脚本目录（先让 `write_audio` 可被导入，例如 `pip install -e .`，
+或把 `runtime/` 加进 `PYTHONPATH`）：
 
 ```bash
+PYTHONPATH=/path/to/write-audio/runtime \
 python -m write_audio song.py --out D:/music/track.mp3 --stems D:/music/stems
-python -m write_audio song.py --check           # 只打印乐谱摘要
+PYTHONPATH=/path/to/write-audio/runtime python -m write_audio song.py --check   # 只打印乐谱摘要
 ```
 
 ## 目录结构
