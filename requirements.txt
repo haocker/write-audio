@@ -1,0 +1,4 @@
+numpy>=1.16
+
+# 另需 FFmpeg（mp3 编码与响度测量）：winget install ffmpeg / brew install ffmpeg / apt install ffmpeg
+# 或在环境变量 CA_FFMPEG / CF_FFMPEG 中指定完整路径
